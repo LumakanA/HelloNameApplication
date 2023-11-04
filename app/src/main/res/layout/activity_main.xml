@@ -4,39 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.MainActivity"
-    android:background="@color/gray">
+    android:background="@color/gray"
+    tools:context=".presentation.MainActivity">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textEnterLayoutName"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/enterNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="250dp"
-        android:layout_marginEnd="50dp"
-        app:boxStrokeWidth="0dp"
-        app:boxStrokeWidthFocused="0dp"
-        app:boxCornerRadiusTopEnd="30dp"
-        app:boxCornerRadiusTopStart="30dp"
-        app:boxCornerRadiusBottomEnd="30dp"
-        app:boxCornerRadiusBottomStart="30dp"
-        android:textColorHint="@color/black"
-        app:boxBackgroundColor="@color/gray"
+        android:layout_marginEnd="100dp"
+        android:gravity="center"
+        android:hint="@string/enter_your_name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/enterNameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:backgroundTint="@color/white"
-            android:hint="@string/enter_your_name"
-            android:textColor="@color/black"
-            android:textSize="20sp"/>
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/saveButton"
@@ -48,6 +33,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEnterLayoutName" />
+        app:layout_constraintTop_toBottomOf="@+id/enterNameEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
